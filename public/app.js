@@ -1,7 +1,7 @@
 import * as FirebaseAuth from './controller/firebase_auth.js';
 import * as Home from './viewpage/home_page.js'
 import * as About from './viewpage/about_page.js'
-import {routing} from './controller/route.js'
+import {routePath, routing} from './controller/route.js'
 
 FirebaseAuth.addEventListeners();
 Home.addEventListeners();
@@ -13,3 +13,11 @@ window.onload = () => {
 
     routing(pathname, hash);
 }
+
+window.addEventListener('popstate', e => {
+    e.preventDefault();
+    const pathname = e. target.location.pathname;
+    const hash = e.target.location.hash;
+
+    routing(pathname, hash);
+})

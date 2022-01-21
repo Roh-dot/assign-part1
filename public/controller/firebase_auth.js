@@ -3,6 +3,7 @@ import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from
 import * as Elements from '../viewpage/elements.js'
 import * as Util from '../viewpage/util.js'
 import * as Constants from '../model/constants.js'
+import { routing } from './route.js';
 
 const auth = getAuth();
 
@@ -51,6 +52,9 @@ function authStateChangeObserver(user) {
         for (let i = 0; i < elements.length; i++) {
             elements[i].style.display = 'block';
         }
+        const pathname = window.location.pathname;
+        const hash = window.location.hash;
+        routing(pathname, hash);
     } else {
         currentUser = null;
         let elements = document.getElementsByClassName('modal-preauth');
@@ -61,5 +65,7 @@ function authStateChangeObserver(user) {
         for (let i = 0; i < elements.length; i++) {
             elements[i].style.display = 'none';
         }
+        
+        Elements.root.innerHTML = 'Signed Out';
     }
 }
