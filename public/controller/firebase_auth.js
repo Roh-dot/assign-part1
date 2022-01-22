@@ -4,6 +4,7 @@ import * as Elements from '../viewpage/elements.js'
 import * as Util from '../viewpage/util.js'
 import * as Constants from '../model/constants.js'
 import { routing } from './route.js';
+import * as WelcomeMessage from '../viewpage/welcome_message.js'
 
 const auth = getAuth();
 
@@ -66,6 +67,6 @@ function authStateChangeObserver(user) {
             elements[i].style.display = 'none';
         }
         
-        Elements.root.innerHTML = 'Signed Out';
+        Elements.root.innerHTML = WelcomeMessage.html;
     }
 }

@@ -1,6 +1,7 @@
 export const root = document.getElementById('root');
 
 export const formSignIn = document.getElementById('form-signin');
+export const formCreateThread = document.getElementById('form-create-thread');
 
 export const menuSignOut = document.getElementById('menu-signOut');
 export const menuHome = document.getElementById('menu-home');
@@ -13,3 +14,4 @@ export const modalInfobox = {
     title: document.getElementById('modal-infobox-title'),
     body: document.getElementById('modal-infobox-body'),
 }
+export const modalCreateThread = new bootstrap.Modal(document.getElementById('modal-create-thread'), {backdrop: 'static'});
