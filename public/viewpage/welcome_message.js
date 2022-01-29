@@ -6,5 +6,10 @@ export const html = `
     <li>to browse threads</li>
     <li>to reply messages to thread</li>
 </ul>
+No Account Yet?
+<!-- Button Trigger modal -->
+<button type="button" class="btn btn-outline-danger " data-bs-toggle="modal" data-bs-target="#modal-create-account">
+Create Account
+</button>
 
 `;

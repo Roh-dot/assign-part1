@@ -1,5 +1,6 @@
 export const root = document.getElementById('root');
 
+export const formSearch = document.getElementById('form-search');
 export const formSignIn = document.getElementById('form-signin');
 export const formCreateThread = document.getElementById('form-create-thread');
 

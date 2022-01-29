@@ -84,7 +84,7 @@ export async function home_page() {
 
     buildHomeScreen(threadList);
 }
-function buildHomeScreen(threadList) {
+export function buildHomeScreen(threadList) {
     let html = '';
     html += `
         <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modal-create-thread">
