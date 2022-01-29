@@ -1,5 +1,5 @@
 {
-  "hosting": {
+  "hosting":{ 
     "site": "a1p2bdbhebed",
     "public": "public",
     "ignore": [
@@ -24,5 +24,8 @@
     "ui": {
       "enabled": true
     }
+  },
+  "functions": {
+    "source": "functions"
   }
 }

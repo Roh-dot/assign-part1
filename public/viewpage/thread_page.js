@@ -15,6 +15,7 @@ export function addViewFormEvents() {
 }
 
 export function attachViewFormEventListener(form) {
+    
     form.addEventListener('submit', e => {
         e.preventDefault();
 
