@@ -20,7 +20,7 @@ export function addEventListeners() {
     Elements.formCreateThread.addEventListener('submit', addNewThread);
 }
 
-export async function addNewThread(e) {
+ async function addNewThread(e) {
     e.preventDefault();
 
     const createButton = e.target.getElementsByTagName('button')[0];
@@ -57,7 +57,7 @@ export async function addNewThread(e) {
         if (noThreadFound) {
             noThreadFound.remove();
         }
-        Util.info('Success', ' A new thread has been added', Elements.modalCreateThread);
+        Util.info('Success', ' Thread has been succesfully created ', Elements.modalCreateThread);
     } catch (e) {
         if (Constants.DEV) console.log(e);
         Util.info('Failed', JSON.stringify(e), Elements.modalCreateThread);
@@ -65,6 +65,7 @@ export async function addNewThread(e) {
 
     Util.enableButton(createButton, label);
 }
+
 
 export async function home_page() {
     if (!currentUser) {
@@ -101,6 +102,8 @@ export function buildHomeScreen(threadList) {
       <th scope="col">Posted By</th>
       <th scope="col">Content</th>
       <th scope="col">Posted At</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
     </tr>
   </thead>
   <tbody id="thread-view-table-body">
@@ -131,7 +134,7 @@ function buildThreadView(thread) {
         <td>
             <form method="post" class="thread-view-form">
                 <input type="hidden" name="threadId" value="${thread.docId}">
-                <button type="submit" class="btn btn-outline-primary">View</button>
+                <button type="submit" class="btn btn-outline-secondary">View</button>
             </form>
         </td>
         <td>${thread.title}</td>
@@ -139,6 +142,9 @@ function buildThreadView(thread) {
         <td>${thread.email}</td>
         <td>${thread.content}</td>
         <td>${new Date(thread.timestamp).toString()}</td>
-
+        <td> <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modal-edit-thread">
+        Edit</button></td>
+        <td> <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modal-delete-thread">
+        Delete</button></td>
     `;
 }

@@ -1,7 +1,7 @@
 import { currentUser } from "../controller/firebase_auth.js";
 import * as ProtectedMessage from './protected_message.js'
 import * as Elements from './elements.js'
-import * as Util from './util.js'
+import * as Util from '../viewpage/util.js'
 import * as FireStoreController from '../controller/firestore_controller.js';
 import * as Constants from '../model/constants.js'
 import { Reply } from "../model/reply.js";

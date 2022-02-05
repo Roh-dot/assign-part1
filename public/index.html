@@ -151,8 +151,58 @@
     </div>
   </div>
 
+  <!-- Modal: form -->
+  <div class="modal fade" id="modal-edit-thread" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="modal-edit-thread-label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal-edit-thread-label">Edit Thread</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="form-edit-thread" method="post">
+            <div>
+              <input type="text" name="title" placeholder="Title of the thread" required minlength="2">
+            </div>
+            <div>
+              <input type="text" name="keywords" placeholder="Search keys separated by a blank" required minlength="2">
+            </div>
+            <div>
+              <textarea name="content" cols="50" rows="5" placeholder="Content of the thread" required
+                minlength="5"></textarea>
+            </div>
+            <div>
+              <button type="submit" class="btn btn-outline-danger">Update</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Delete Popup -->
+  <div class="modal fade" id="modal-delete-thread" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="modal-delete-thread-label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal-delete-thread-label">Delete Thread</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="form-delete-thread" method="post">
+            <div>
+              <button type="submit" class="btn btn-outline-danger">Delete</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- MAIN ROOT -->
-  <div id="root" class="bg-light m-3 p-4">Hello World</div>
+  <div id="root" class="bg-light m-3 p-4"></div>
 
   <script type="module">
     // Import the functions you need from the SDKs you need

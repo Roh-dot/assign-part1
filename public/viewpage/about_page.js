@@ -16,6 +16,6 @@ export function about_page() {
         return;
     }
     Elements.root.innerHTML = `
-        <h1>About Page</h1>
+        <h1>Logged in as id:1@test.com</h1>
     `;
 }

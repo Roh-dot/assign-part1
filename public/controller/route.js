@@ -2,6 +2,7 @@ import { home_page } from "../viewpage/home_page.js";
 import { about_page } from "../viewpage/about_page.js";
 import { thread_page } from "../viewpage/thread_page.js";
 import { search_page } from "../viewpage/search_page.js";
+
 export const routePath = {
     HOME: '/',
     ABOUT: '/about',

@@ -14,6 +14,11 @@ export async function addThread(thread) {
     return docRef.id;
 }
 
+export async function editThread(Edit) {
+    const docRef = await addDoc(collection(db, COLLECTIONS.THREADS), Edit.toFirestore());
+    return docRef.id;
+}
+
 export async function getThreadList () {
     let threadList = [];
     const q = query(collection(db, COLLECTIONS.THREADS), orderBy('timestamp', 'desc'));

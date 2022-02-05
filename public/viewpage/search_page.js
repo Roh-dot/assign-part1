@@ -1,5 +1,5 @@
-import * as Elements from './elements.js'
-import * as Util from './Util.js'
+import * as Elements from '../viewpage/elements.js'
+import * as Util from '../viewpage/util.js'
 import { routePath } from '../controller/route.js';
 import { currentUser } from '../controller/firebase_auth.js';
 import * as ProtectedMessage from "./protected_message.js"
